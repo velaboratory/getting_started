@@ -79,4 +79,18 @@
 
 * Plugin headset, verify that USB debugging is working (should show up in build settings run device) and Run 
 * Build and Run, put in Builds folder (so gitignored) called main.apk
-	* Note, first build takes quite a lot of time (mine was 431s), but subsequent builds can be very fast (My second was 36s, 3rd build 33s0)  
+	* Note, first build takes quite a lot of time (mine was 431s), but subsequent builds can be very fast (My second was 36s, 3rd build 33s0)
+
+* If you want Unity UI input
+	* Add a canvas
+		* Set to worldspace
+		* Scale to .001,.001,.001
+		* Add a button, import TMP
+	* On the Event System Object
+		* Delete Standalone Input Module (or uncheck it)
+		* Add WorldMouseInputModule from velutils
+	* On the left/right hand anchors, add a new game object called world mouse
+		* On each of these, add a world mouse with laser component, and setup side to be left or right (with appropriate input setting)
+		* change side to left/right respectively
+		* Change laser to red
+		* Under project settings/graphics, add an always included shader - Unlit/Color
