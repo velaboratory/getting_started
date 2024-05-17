@@ -1,4 +1,6 @@
 # getting_started
+This document is intended to help you get started with a new Unity project featuring VEL components for Quest 3.  
+
 * Start a blank Unity 3D project
 	* add a proper gitignore file to the folder (and git init)
 	
